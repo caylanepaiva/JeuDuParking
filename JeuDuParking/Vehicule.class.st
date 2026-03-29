@@ -2,10 +2,9 @@ Class {
 	#name : #Vehicule,
 	#superclass : #Object,
 	#instVars : [
-		'identifiant',
+		'id',
 		'position',
-		'taille',
-		'id'
+		'taille'
 	],
 	#category : #JeuDuParking
 }

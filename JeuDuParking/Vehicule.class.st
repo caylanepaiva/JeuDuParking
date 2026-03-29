@@ -18,14 +18,6 @@ Vehicule class >> id: unId en: unePosition taille: uneTaille [
 ]
 
 { #category : #accessing }
-Vehicule >> casesOccupees [
-	^ (1 to: taille) collect: [ :i |
-		self estHorizontal
-			ifTrue: [ (position x + i - 1) @ position y ]
-			ifFalse: [ position x @ (position y + i - 1) ] ]
-]
-
-{ #category : #accessing }
 Vehicule >> id [
     ^ id
 ]

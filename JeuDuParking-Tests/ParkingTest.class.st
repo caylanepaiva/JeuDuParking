@@ -12,7 +12,7 @@ Class {
 ParkingTest >> setUp [
 	super setUp.
 	parking := Parking  largeur: 6  hauteur: 6 sortie: 3@6.
-	vehicule := VehiculeVertical id: $R en: 2@3 taille: 2.
+	vehicule := VehiculeVertical id: $R position: 2@3 taille: 2.
 	
 
 ]

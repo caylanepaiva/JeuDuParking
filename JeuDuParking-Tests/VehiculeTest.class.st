@@ -19,7 +19,7 @@ VehiculeTest >> setUp [
 { #category : #tests }
 VehiculeTest >> testCasesOccupeesHorizontal [
 
-	vehicule := VehiculeHorizontal id: $R en: 2@3 taille: 2.
+	vehicule := VehiculeHorizontal id: $R position: 2@3 taille: 2.
 	self assert: vehicule casesOccupees equals: (Array with: 2@3 with:3@3)
 
 ]
@@ -27,7 +27,7 @@ VehiculeTest >> testCasesOccupeesHorizontal [
 { #category : #tests }
 VehiculeTest >> testCasesOccupeesVertical [
 
-	vehicule := VehiculeVertical id: $R en: 4@3 taille: 3.
+	vehicule := VehiculeVertical id: $R position: 4@3 taille: 3.
 	self assert: vehicule casesOccupees equals: (Array with: 4@3 with: 4@4 with: 4@5)
 
 

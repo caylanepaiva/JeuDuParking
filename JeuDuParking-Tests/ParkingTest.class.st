@@ -11,16 +11,9 @@ Class {
 { #category : #running }
 ParkingTest >> setUp [
 	super setUp.
-	parking := Parking new.
-	parking largeur: 6.
-	parking hauteur: 6.
-	parking sortie: 3@6.
-
-	vehicule := Vehicule new.
-	vehicule identifiant: $R.
-	vehicule position: 2@3.
-	vehicule taille: 2.
-	vehicule orientation: #vertical
+	parking := Parking  largeur: 6  hauteur: 6 sortie: 3@6.
+	vehicule := VehiculeVertical id: $R en: 2@3 taille: 2.
+	
 
 ]
 

@@ -11,8 +11,7 @@ Class {
 VehiculeTest >> setUp [
 	"Hooks that subclasses may override to define the fixture of test."
 	super setUp.
-	vehicule := Vehicule new.
-	vehicule identifiant: $R.
+ 
 
 
 ]
@@ -20,21 +19,16 @@ VehiculeTest >> setUp [
 { #category : #tests }
 VehiculeTest >> testCasesOccupeesHorizontal [
 
-	vehicule position: 2@3.
-	vehicule taille: 2.
-	vehicule orientation: #horizontal.
-
+	vehicule := VehiculeHorizontal id: $R en: 2@3 taille: 2.
 	self assert: vehicule casesOccupees equals: (Array with: 2@3 with:3@3)
 
 ]
 
 { #category : #tests }
 VehiculeTest >> testCasesOccupeesVertical [
-	vehicule position: 4@3.
-	vehicule taille: 3.
-	vehicule orientation: #horizontal.
 
-	self assert: vehicule casesOccupees equals: (Array with: 4@3 with: 5@3 with: 6@3)
+	vehicule := VehiculeVertical id: $R en: 4@3 taille: 3.
+	self assert: vehicule casesOccupees equals: (Array with: 4@3 with: 4@4 with: 4@5)
 
 
 ]

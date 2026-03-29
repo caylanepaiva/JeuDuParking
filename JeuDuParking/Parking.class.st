@@ -10,6 +10,13 @@ Class {
 	#category : #JeuDuParking
 }
 
+{ #category : #'instance creation' }
+Parking class >> largeur: uneLargeur hauteur: uneHauteur sortie: uneSortie [
+    ^ self new
+        initialiserLargeur: uneLargeur hauteur: uneHauteur sortie: uneSortie;
+        yourself
+]
+
 { #category : #accessing }
 Parking >> ajouterVehicule: unVehicule [
 	vehicules add: unVehicule
@@ -49,7 +56,7 @@ Parking >> caractereA: unPoint [
 	vehicule := self vehiculeA: unPoint.
 	^ vehicule
 		ifNil: [ $. ]
-		ifNotNil: [ vehicule identifiant ]
+		ifNotNil: [ vehicule id]
 ]
 
 { #category : #accessing }
@@ -60,6 +67,14 @@ Parking >> hauteur [
 { #category : #accessing }
 Parking >> hauteur: uneHauteur [
 	hauteur := uneHauteur
+]
+
+{ #category : #initialization }
+Parking >> initialiserLargeur: uneLargeur hauteur: uneHauteur sortie: uneSortie [
+    self initialize.
+    largeur := uneLargeur.
+    hauteur := uneHauteur.
+    sortie := uneSortie
 ]
 
 { #category : #initialization }

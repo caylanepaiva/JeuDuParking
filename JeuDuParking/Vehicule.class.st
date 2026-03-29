@@ -5,10 +5,17 @@ Class {
 		'identifiant',
 		'position',
 		'taille',
-		'orientation'
+		'id'
 	],
 	#category : #JeuDuParking
 }
+
+{ #category : #'instance creation' }
+Vehicule class >> id: unId en: unePosition taille: uneTaille [
+    ^ self new
+        initialiserId: unId position: unePosition taille: uneTaille;
+        yourself
+]
 
 { #category : #accessing }
 Vehicule >> casesOccupees [
@@ -19,33 +26,26 @@ Vehicule >> casesOccupees [
 ]
 
 { #category : #accessing }
-Vehicule >> estHorizontal [
-	^ orientation = #horizontal
+Vehicule >> id [
+    ^ id
 ]
 
 { #category : #accessing }
-Vehicule >> estVertical [
-	^ orientation = #vertical
+Vehicule >> id: unId [ 
+	id := unId
 ]
 
-{ #category : #accessing }
-Vehicule >> identifiant [
-	^ identifiant
+{ #category : #initialization }
+Vehicule >> initialiserId: unId position: unePosition taille: uneTaille [
+    self initialize.
+    id := unId.
+    position := unePosition.
+    taille := uneTaille
 ]
 
-{ #category : #accessing }
-Vehicule >> identifiant: unIdentifiant [
-	identifiant := unIdentifiant
-]
-
-{ #category : #accessing }
-Vehicule >> orientation [
-	^ orientation
-]
-
-{ #category : #accessing }
-Vehicule >> orientation: uneOrientation [
-	orientation := uneOrientation
+{ #category : #initialization }
+Vehicule >> initialize [
+    super initialize
 ]
 
 { #category : #accessing }

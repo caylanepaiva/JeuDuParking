@@ -11,13 +11,6 @@ Class {
 }
 
 { #category : #'instance creation' }
-Vehicule class >> id: unId en: unePosition taille: uneTaille [
-    ^ self new
-        initialiserId: unId position: unePosition taille: uneTaille;
-        yourself
-]
-
-{ #category : #'instance creation' }
 Vehicule class >> id: unId position: unePosition taille: uneTaille [
     ^ self new
         initialiserId: unId position: unePosition taille: uneTaille;

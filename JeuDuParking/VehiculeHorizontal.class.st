@@ -4,7 +4,7 @@ Class {
 	#category : #JeuDuParking
 }
 
-{ #category : #initialization }
+{ #category : #acccessing }
 VehiculeHorizontal >> casesOccupees [
     ^ (0 to: taille - 1) collect: [ :i | (position x + i) @ position y ]
 ]
